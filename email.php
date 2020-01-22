@@ -8,6 +8,6 @@ $to = "bashiqali111@gmail.com";
 
 mail ($to, $subject, $message, "From: " . $name);
 
-header('Location: form.html');
+header('Location: index.html');
 
 ?>
