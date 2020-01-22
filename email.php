@@ -1,13 +1,12 @@
-<?php
-
 $name = $_POST['name'];
 $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 $to = "bashiqali111@gmail.com";
+$headers = 'From: '.$email."\r\n" .
+        'Reply-To: '.$email."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-mail ($to, $subject, $message, "From: " . $name);
+mail($to, $subject, $message, $headers, "From: " . $name);
 
 header('Location: index.html');
-
-?>
